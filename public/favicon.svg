@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, extended down to Y=78.5 to match the baseline of the A's pointed tail -->
-    <path d="M 74.5 -5 L 89.5 -5 L 89.5 78.5 Q 82 76 74.5 76.5 Z" class="i-line" />
+    <!-- A pure, mathematically flat rectangle. Completely vertical sides, completely horizontal bottom. -->
+    <rect x="74.5" y="-5" width="15" height="83.5" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
