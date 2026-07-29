@@ -8,11 +8,11 @@
         </mask>
     </defs>
 
-    <!-- The masked A shape -->
+    <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, explicitly drawn as a path to guarantee no diagonal clipping cuts from the browser -->
-    <path d="M 74.5 -5 L 98.7 -5 L 98.7 78.5 Q 85 71.5 74.5 71.5 Z" class="i-line" />
+    <!-- The vertical I, with perfect weight, reduced precisely to 93 -->
+    <rect x="74.5" y="-5" width="24.2" height="93" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
