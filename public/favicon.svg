@@ -11,8 +11,8 @@
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I: weight reduced to 20, height reduced to 86 by pushing the top down to Y=0.6, preserving the Y=86.6 bottom alignment -->
-    <rect x="74.5" y="0.6" width="20" height="86" rx="1.2" class="i-line" />
+    <!-- The vertical I: height reduced to 82 by pushing the top down to Y=4.6, preserving the Y=86.6 bottom alignment -->
+    <rect x="74.5" y="4.6" width="20" height="82" rx="1.2" class="i-line" />
     
     <style>
         .a-shape { 
