@@ -9,7 +9,7 @@
     </defs>
 
     <!-- Background Frame (Anthropic Espresso) -->
-    <rect width="128" height="128" rx="28" fill="#141413" />
+    <!-- Removed from SVG to apply dynamically via CSS in Header.astro -->
 
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
