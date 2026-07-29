@@ -21,4 +21,4 @@ All commands are run from the root of the project:
 
 ## Author
 
-**Elvis Tata ** - AI Researcher
+** Elvis Tata ** - AI Researcher
