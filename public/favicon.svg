@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, width 22.2, height 92, converted back to a pure flat-bottomed rectangle -->
-    <rect x="74.5" y="-5" width="22.2" height="92" class="i-line" />
+    <!-- The vertical I, exactly matching the absolute global baseline of the A's lowest sharp point (Y=85.4). This requires height=90.4 -->
+    <rect x="74.5" y="-5" width="22.2" height="90.4" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
