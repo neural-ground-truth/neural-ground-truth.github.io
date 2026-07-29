@@ -4,15 +4,15 @@
         
         <mask id="gap-mask">
             <rect x="0" y="0" width="128" height="128" fill="white" />
-            <rect x="74" y="-10" width="23.2" height="150" fill="black" />
+            <rect x="74" y="-10" width="21" height="150" fill="black" />
         </mask>
     </defs>
 
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, perfectly square bounds, with rx="1.2" to give it perfectly rounded corners that match the A's softening exactly -->
-    <rect x="74.5" y="-5" width="22.2" height="91.6" rx="1.2" class="i-line" />
+    <!-- The vertical I: weight reduced to 20, height reduced to 86 by pushing the top down to Y=0.6, preserving the Y=86.6 bottom alignment -->
+    <rect x="74.5" y="0.6" width="20" height="86" rx="1.2" class="i-line" />
     
     <style>
         .a-shape { 
@@ -21,13 +21,13 @@
             stroke-width: 2.4px;
             stroke-linejoin: round;
         }
-        .i-line { fill: #4338ca; }
+        .i-line { fill: #8a6410; }
         @media (prefers-color-scheme: dark) {
             .a-shape { 
                 fill: #FFF; 
                 stroke: #FFF;
             }
-            .i-line { fill: #818cf8; }
+            .i-line { fill: #e6c072; }
         }
     </style>
 </svg>
