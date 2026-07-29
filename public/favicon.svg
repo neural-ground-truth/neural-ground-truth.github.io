@@ -4,15 +4,15 @@
         
         <mask id="gap-mask">
             <rect x="0" y="0" width="128" height="128" fill="white" />
-            <rect x="74" y="-10" width="25.2" height="150" fill="black" />
+            <rect x="74" y="-10" width="23.2" height="150" fill="black" />
         </mask>
     </defs>
 
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, extended down so its total height is 92, preserving the exact same 75.1 concave arc at its new baseline -->
-    <path d="M 74.5 -5 L 98.7 -5 L 98.7 87 a 75.1 75.1 0 0 0 -24.2 -7 Z" class="i-line" />
+    <!-- The vertical I, width reduced to exactly 22.2, height 92, preserving the exact same 75.1 concave arc -->
+    <path d="M 74.5 -5 L 96.7 -5 L 96.7 87 a 75.1 75.1 0 0 0 -22.2 -7 Z" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
