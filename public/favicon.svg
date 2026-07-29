@@ -4,14 +4,14 @@
         
         <mask id="gap-mask">
             <rect x="0" y="0" width="128" height="128" fill="white" />
-            <rect x="74" y="-10" width="21" height="150" fill="black" />
+            <rect x="72.5" y="-10" width="24" height="150" fill="black" />
         </mask>
     </defs>
 
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I: height reduced to 82 by pushing the top down to Y=4.6, preserving the Y=86.6 bottom alignment -->
+    <!-- The vertical I -->
     <rect x="74.5" y="4.6" width="20" height="82" rx="1.2" class="i-line" />
     
     <style>
