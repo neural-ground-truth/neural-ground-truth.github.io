@@ -21,4 +21,4 @@ All commands are run from the root of the project:
 
 ## Author
 
-**Elvis Tata Tanghang** - Researcher in Electrical & Computer Engineering at Carnegie Mellon University (CMU).
+**Elvis Tata ** - AI Researcher
