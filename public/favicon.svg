@@ -12,7 +12,7 @@
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
     <!-- A pure, mathematically flat rectangle. Completely vertical sides, completely horizontal bottom. -->
-    <rect x="74.5" y="-5" width="15" height="83.5" class="i-line" />
+    <rect x="74.5" y="-5" width="15" height="95" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
