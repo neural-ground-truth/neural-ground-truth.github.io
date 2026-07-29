@@ -4,11 +4,11 @@
         
         <mask id="gap-mask">
             <rect x="0" y="0" width="128" height="128" fill="white" />
-            <rect x="67" y="0" width="23" height="128" fill="black" />
+            <rect x="70" y="-10" width="23" height="150" fill="black" />
         </mask>
         
         <clipPath id="i-clip">
-            <rect x="0" y="0" width="128" height="55" />
+            <rect x="0" y="-10" width="128" height="65" />
             <use href="#a-path" />
         </clipPath>
     </defs>
@@ -17,7 +17,7 @@
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
     <!-- The vertical I, perfectly arched at the bottom via clipPath -->
-    <rect x="71.5" y="0" width="15" height="100" class="i-line" clip-path="url(#i-clip)" />
+    <rect x="74.5" y="-5" width="15" height="100" class="i-line" clip-path="url(#i-clip)" />
     
     <style>
         .a-shape { fill: #000; }
