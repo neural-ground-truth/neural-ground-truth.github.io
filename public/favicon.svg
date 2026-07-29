@@ -8,6 +8,9 @@
         </mask>
     </defs>
 
+    <!-- Background Frame (Anthropic Espresso) -->
+    <rect width="128" height="128" rx="28" fill="#141413" />
+
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
@@ -16,18 +19,13 @@
     
     <style>
         .a-shape { 
-            fill: #000; 
-            stroke: #000;
+            fill: #f0eee6; /* Anthropic Paper White */
+            stroke: #f0eee6;
             stroke-width: 2.4px;
             stroke-linejoin: round;
         }
-        .i-line { fill: #8a6410; }
-        @media (prefers-color-scheme: dark) {
-            .a-shape { 
-                fill: #FFF; 
-                stroke: #FFF;
-            }
-            .i-line { fill: #e6c072; }
+        .i-line { 
+            fill: #e6c072; /* Signature Bright Gold */
         }
     </style>
 </svg>
