@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, with perfect weight, reduced precisely to 93 -->
-    <rect x="74.5" y="-5" width="24.2" height="93" class="i-line" />
+    <!-- The vertical I, with perfect weight, reduced precisely to 90 -->
+    <rect x="74.5" y="-5" width="24.2" height="90" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
