@@ -8,17 +8,25 @@
         </mask>
     </defs>
 
-    <!-- The masked A shape with a gap cut out -->
+    <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, exactly matching the absolute global baseline of the A's lowest sharp point (Y=85.4). This requires height=90.4 -->
-    <rect x="74.5" y="-5" width="22.2" height="90.4" class="i-line" />
+    <!-- The vertical I, perfectly square, height adjusted to 91.6 to maintain perfect horizontal baseline alignment with the newly-thickened rounded A tip (Y=86.6) -->
+    <rect x="74.5" y="-5" width="22.2" height="91.6" class="i-line" />
     
     <style>
-        .a-shape { fill: #000; }
+        .a-shape { 
+            fill: #000; 
+            stroke: #000;
+            stroke-width: 2.4px;
+            stroke-linejoin: round;
+        }
         .i-line { fill: #4338ca; }
         @media (prefers-color-scheme: dark) {
-            .a-shape { fill: #FFF; }
+            .a-shape { 
+                fill: #FFF; 
+                stroke: #FFF;
+            }
             .i-line { fill: #818cf8; }
         }
     </style>
