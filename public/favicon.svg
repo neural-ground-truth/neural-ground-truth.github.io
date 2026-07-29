@@ -1,11 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Z" />
-    <path d="M 74 0 L 100 0 L 100 78.7 Q 87 71 74 72 Z" class="i-line" />
+    <defs>
+        <path id="a-path" d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Z" />
+        
+        <mask id="gap-mask">
+            <rect x="0" y="0" width="128" height="128" fill="white" />
+            <rect x="67" y="0" width="23" height="128" fill="black" />
+        </mask>
+        
+        <clipPath id="i-clip">
+            <rect x="0" y="0" width="128" height="55" />
+            <use href="#a-path" />
+        </clipPath>
+    </defs>
+
+    <!-- The masked A shape with a gap cut out -->
+    <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
+    
+    <!-- The vertical I, perfectly arched at the bottom via clipPath -->
+    <rect x="71.5" y="0" width="15" height="100" class="i-line" clip-path="url(#i-clip)" />
+    
     <style>
-        path { fill: #000; }
+        .a-shape { fill: #000; }
         .i-line { fill: #4338ca; }
         @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
+            .a-shape { fill: #FFF; }
             .i-line { fill: #818cf8; }
         }
     </style>
