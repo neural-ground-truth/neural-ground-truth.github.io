@@ -1,47 +1,145 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
 ---
-<header>
+
+<nav class="top">
 	<div class="wrap">
-		<h2 class="brand"><a href="/">Neural Ground Truth</a></h2>
-		<nav class="links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/posts">Posts</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</nav>
+		<a href="/" class="brand">
+			<span>{SITE_TITLE}</span>
+		</a>
+		<div style="flex: 1;"></div>
+		<div class="links">
+			<HeaderLink href="/" class="hide-sm">Home</HeaderLink>
+			<HeaderLink href="/posts" class="hide-sm">Posts</HeaderLink>
+			<HeaderLink href="/about" class="hide-sm">About</HeaderLink>
+			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+				</svg>
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="5"></circle>
+					<line x1="12" y1="1" x2="12" y2="3"></line>
+					<line x1="12" y1="21" x2="12" y2="23"></line>
+					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+					<line x1="1" y1="12" x2="3" y2="12"></line>
+					<line x1="21" y1="12" x2="23" y2="12"></line>
+					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+				</svg>
+			</button>
+		</div>
 	</div>
-</header>
+</nav>
+
 <style>
-	h2.brand {
-		margin: 0;
-		font-size: 1.25em;
-		letter-spacing: -0.02em;
-		font-weight: 700;
-		border: none;
+	nav.top {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background: var(--nav-bg);
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		border-bottom: 1px solid var(--line-soft);
+		transition: background 0.35s ease, border-color 0.35s ease;
 	}
-	h2.brand a {
+	nav.top .wrap {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		height: 60px;
+	}
+	nav.top .brand {
+		font-family: var(--mono);
+		font-size: 13.5px;
+		font-weight: 500;
+		letter-spacing: 0.03em;
 		color: var(--ink);
 		border: none;
+		display: flex;
+		align-items: center;
+		gap: 8px;
 	}
-	h2.brand a:hover {
+	nav.top .brand:hover {
 		color: var(--accent);
 	}
-	nav.links {
+	nav.top .links {
 		display: flex;
-		gap: 1.5em;
 		align-items: center;
+		gap: 24px;
 	}
-	nav.links a {
-		font-size: 0.95em;
-		font-weight: 500;
+	.theme-toggle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		padding: 0;
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 8px;
 		color: var(--ink-dim);
-		border-bottom: 2px solid transparent;
-		padding-bottom: 0.2em;
-		transition: color 0.2s, border-color 0.2s;
+		cursor: pointer;
+		transition: color 0.18s ease, border-color 0.18s ease, background 0.35s ease, transform 0.15s ease;
 	}
-	nav.links a:hover,
-	nav.links a.active {
-		color: var(--ink);
-		border-bottom-color: var(--accent);
+	.theme-toggle:hover {
+		color: var(--accent);
+		border-color: var(--accent-dim);
+		background: var(--bg-soft);
+		transform: scale(1.04);
+	}
+	.theme-toggle:active {
+		transform: scale(0.96);
+	}
+	.theme-toggle svg {
+		width: 16px;
+		height: 16px;
+		display: block;
+	}
+	.theme-toggle .icon-moon {
+		display: none;
+	}
+	.theme-toggle .icon-sun {
+		display: block;
+	}
+	:global([data-theme="light"]) .theme-toggle .icon-sun {
+		display: none;
+	}
+	:global([data-theme="light"]) .theme-toggle .icon-moon {
+		display: block;
+	}
+	@media (prefers-color-scheme: light) {
+		:global(:root:not([data-theme])) .theme-toggle .icon-sun {
+			display: none;
+		}
+		:global(:root:not([data-theme])) .theme-toggle .icon-moon {
+			display: block;
+		}
+	}
+	@media(max-width: 640px) {
+		nav.top .links { gap: 14px; }
+		nav.top .links :global(.hide-sm) { display: none; }
 	}
 </style>
+
+<script>
+	// Theme toggle functionality
+	(function () {
+		var root = document.documentElement;
+		var btn = document.getElementById('themeToggle');
+		if(!btn) return;
+		function current() {
+			var set = root.getAttribute('data-theme');
+			if (set) return set;
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+		}
+		btn.addEventListener('click', function () {
+			var next = current() === 'dark' ? 'light' : 'dark';
+			root.setAttribute('data-theme', next);
+			try { localStorage.setItem('theme', next); } catch (e) { }
+		});
+	})();
+</script>

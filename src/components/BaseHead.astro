@@ -32,11 +32,22 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- KaTeX Styles for Math Rendering -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Theme Script -->
+<script is:inline>
+	// Set theme before paint to avoid a flash of the wrong theme.
+	(function () {
+		try {
+			var t = localStorage.getItem('theme');
+			if (t) { document.documentElement.setAttribute('data-theme', t); }
+		} catch (e) { }
+	})();
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

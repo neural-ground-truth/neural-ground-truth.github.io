@@ -1,38 +1,51 @@
 ---
 const today = new Date();
 ---
+
 <footer>
-	<div class="wrap">
-		&copy; {today.getFullYear()} Elvis Tata Tanghang. All rights reserved.
-		<div class="social-links">
+	<div class="wrap footer-content">
+		<div class="foot-brand">&copy; {today.getFullYear()} Elvis Tata Tanghang.</div>
+		<div class="foot-links">
 			<a href="https://github.com/tanettech" target="_blank" rel="noopener">GitHub</a>
-			<a href="https://huggingface.co/ElvisTata2024" target="_blank" rel="noopener">Hugging Face</a>
 			<a href="https://www.linkedin.com/in/elvis-tata" target="_blank" rel="noopener">LinkedIn</a>
+			<a href="https://huggingface.co/ElvisTata2024" target="_blank" rel="noopener">Hugging Face</a>
+			<a href="mailto:getson2215@gmail.com">Email</a>
 		</div>
 	</div>
 </footer>
+
 <style>
 	footer {
-		padding: 2em 0;
-		border-top: 1px solid var(--line);
-		text-align: center;
-		color: var(--ink-dim);
-		font-size: 0.9em;
-		margin-top: 4em;
+		padding: 32px 0 48px;
+		border-top: 1px solid var(--line-soft);
+		margin-top: 60px;
 	}
-	.social-links {
+	.footer-content {
 		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
 	}
-	.social-links a {
-		text-decoration: none;
-		color: var(--ink-dim);
-		border-bottom: 1px solid transparent;
-		transition: color 0.2s;
+	.foot-brand {
+		font-family: var(--mono);
+		font-size: 12.5px;
+		color: var(--ink-faint);
+		letter-spacing: 0.02em;
 	}
-	.social-links a:hover {
+	.foot-links {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+	}
+	.foot-links a {
+		font-family: var(--mono);
+		font-size: 12px;
+		color: var(--ink-faint);
+		border: none;
+		transition: color 0.18s ease;
+	}
+	.foot-links a:hover {
 		color: var(--accent);
 	}
 </style>
