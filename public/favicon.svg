@@ -4,15 +4,20 @@
         
         <mask id="gap-mask">
             <rect x="0" y="0" width="128" height="128" fill="white" />
-            <rect x="70" y="-10" width="23" height="150" fill="black" />
+            <rect x="74" y="-10" width="25.2" height="150" fill="black" />
         </mask>
+        
+        <clipPath id="i-clip">
+            <rect x="0" y="-10" width="128" height="80" />
+            <use href="#a-path" />
+        </clipPath>
     </defs>
 
-    <!-- The masked A shape with a gap cut out -->
+    <!-- The masked A shape -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- A pure, mathematically flat rectangle. Completely vertical sides, completely horizontal bottom. -->
-    <rect x="74.5" y="-5" width="15" height="95" class="i-line" />
+    <!-- The vertical I, matching the left leg's exact width (24.2) and aligning perfectly with the A's bottom arc -->
+    <rect x="74.5" y="-5" width="24.2" height="100" class="i-line" clip-path="url(#i-clip)" />
     
     <style>
         .a-shape { fill: #000; }
