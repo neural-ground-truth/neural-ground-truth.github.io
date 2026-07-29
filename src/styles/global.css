@@ -1,21 +1,21 @@
 /* ---------- DARK (Anthropic Espresso) ---------- */
 :root {
-	--bg: #1c1a17;
-	--bg-soft: #262420;
-	--bg-elevated: #2f2d29;
-	--panel: #262420;
-	--card-top: rgba(38, 36, 32, 0.95);
-	--card-bot: rgba(31, 29, 25, 0.95);
+	--bg: #141413;
+	--bg-soft: #232321;
+	--bg-elevated: #2e2e2b;
+	--panel: #232321;
+	--card-top: rgba(35, 35, 33, 0.95);
+	--card-bot: rgba(25, 25, 24, 0.95);
 	--line: rgba(255, 255, 255, 0.08);
 	--line-soft: rgba(255, 255, 255, 0.05);
-	--ink: #e8e4df;
-	--ink-dim: #a39f9a;
-	--ink-faint: #7a7671;
-	--accent: #d4af66;
-	--accent-dim: #a6894f;
-	--accent-bg: rgba(212, 175, 102, 0.08);
-	--nav-bg: rgba(28, 26, 23, 0.85);
-	--code-bg: #262420;
+	--ink: #f0eee6;
+	--ink-dim: #b0aea5;
+	--ink-faint: #87867f;
+	--accent: #d97757;
+	--accent-dim: #b86246;
+	--accent-bg: rgba(217, 119, 87, 0.1);
+	--nav-bg: rgba(20, 20, 19, 0.85);
+	--code-bg: #232321;
 	--pill-bg: rgba(255, 255, 255, 0.04);
 	--pill-border: rgba(255, 255, 255, 0.08);
 	--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -28,22 +28,22 @@
 
 /* ---------- LIGHT (Anthropic Paper) ---------- */
 :root[data-theme="light"] {
-	--bg: #f5f3f0;
-	--bg-soft: #ebe7e1;
-	--bg-elevated: #ffffff;
-	--panel: #ffffff;
-	--card-top: rgba(255, 255, 255, 0.9);
-	--card-bot: rgba(245, 243, 240, 0.9);
-	--line: rgba(0, 0, 0, 0.08);
-	--line-soft: rgba(0, 0, 0, 0.05);
-	--ink: #2d2a26;
-	--ink-dim: #6b6762;
-	--ink-faint: #9c9791;
-	--accent: #a07d2c;
-	--accent-dim: #7a5f22;
-	--accent-bg: rgba(160, 125, 44, 0.06);
-	--nav-bg: rgba(245, 243, 240, 0.85);
-	--code-bg: #ebe7e1;
+	--bg: #f0eee6;
+	--bg-soft: #e8e6dc;
+	--bg-elevated: #faf9f5;
+	--panel: #faf9f5;
+	--card-top: rgba(250, 249, 245, 0.9);
+	--card-bot: rgba(232, 230, 220, 0.9);
+	--line: rgba(20, 20, 19, 0.08);
+	--line-soft: rgba(20, 20, 19, 0.05);
+	--ink: #141413;
+	--ink-dim: #3d3d3a;
+	--ink-faint: #87867f;
+	--accent: #d97757;
+	--accent-dim: #b86246;
+	--accent-bg: rgba(217, 119, 87, 0.1);
+	--nav-bg: rgba(240, 238, 230, 0.85);
+	--code-bg: #e8e6dc;
 	--pill-bg: rgba(0, 0, 0, 0.03);
 	--pill-border: rgba(0, 0, 0, 0.08);
 	--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
@@ -53,22 +53,22 @@
 /* Follow system when the user hasn't chosen explicitly */
 @media (prefers-color-scheme: light) {
 	:root:not([data-theme]) {
-		--bg: #f5f3f0;
-		--bg-soft: #ebe7e1;
-		--bg-elevated: #ffffff;
-		--panel: #ffffff;
-		--card-top: rgba(255, 255, 255, 0.9);
-		--card-bot: rgba(245, 243, 240, 0.9);
-		--line: rgba(0, 0, 0, 0.08);
-		--line-soft: rgba(0, 0, 0, 0.05);
-		--ink: #2d2a26;
-		--ink-dim: #6b6762;
-		--ink-faint: #9c9791;
-		--accent: #a07d2c;
-		--accent-dim: #7a5f22;
-		--accent-bg: rgba(160, 125, 44, 0.06);
-		--nav-bg: rgba(245, 243, 240, 0.85);
-		--code-bg: #ebe7e1;
+		--bg: #f0eee6;
+		--bg-soft: #e8e6dc;
+		--bg-elevated: #faf9f5;
+		--panel: #faf9f5;
+		--card-top: rgba(250, 249, 245, 0.9);
+		--card-bot: rgba(232, 230, 220, 0.9);
+		--line: rgba(20, 20, 19, 0.08);
+		--line-soft: rgba(20, 20, 19, 0.05);
+		--ink: #141413;
+		--ink-dim: #3d3d3a;
+		--ink-faint: #87867f;
+		--accent: #d97757;
+		--accent-dim: #b86246;
+		--accent-bg: rgba(217, 119, 87, 0.1);
+		--nav-bg: rgba(240, 238, 230, 0.85);
+		--code-bg: #e8e6dc;
 		--pill-bg: rgba(0, 0, 0, 0.03);
 		--pill-border: rgba(0, 0, 0, 0.08);
 		--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
