@@ -11,9 +11,9 @@
 	--ink: #f0eee6;
 	--ink-dim: #b0aea5;
 	--ink-faint: #87867f;
-	--accent: #d97757;
-	--accent-dim: #b86246;
-	--accent-bg: rgba(217, 119, 87, 0.1);
+	--accent: #e6c072;
+	--accent-dim: #c2a25a;
+	--accent-bg: rgba(230, 192, 114, 0.08);
 	--nav-bg: rgba(20, 20, 19, 0.85);
 	--code-bg: #232321;
 	--pill-bg: rgba(255, 255, 255, 0.04);
@@ -39,9 +39,9 @@
 	--ink: #141413;
 	--ink-dim: #3d3d3a;
 	--ink-faint: #87867f;
-	--accent: #d97757;
-	--accent-dim: #b86246;
-	--accent-bg: rgba(217, 119, 87, 0.1);
+	--accent: #8a6410;
+	--accent-dim: #a07d2c;
+	--accent-bg: rgba(138, 100, 16, 0.06);
 	--nav-bg: rgba(240, 238, 230, 0.85);
 	--code-bg: #e8e6dc;
 	--pill-bg: rgba(0, 0, 0, 0.03);
@@ -64,9 +64,9 @@
 		--ink: #141413;
 		--ink-dim: #3d3d3a;
 		--ink-faint: #87867f;
-		--accent: #d97757;
-		--accent-dim: #b86246;
-		--accent-bg: rgba(217, 119, 87, 0.1);
+		--accent: #8a6410;
+		--accent-dim: #a07d2c;
+		--accent-bg: rgba(138, 100, 16, 0.06);
 		--nav-bg: rgba(240, 238, 230, 0.85);
 		--code-bg: #e8e6dc;
 		--pill-bg: rgba(0, 0, 0, 0.03);
