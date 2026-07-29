@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, drawn with strict explicit coordinates -->
-    <path d="M 74.5 -5 L 89.5 -5 L 89.5 73.6 Q 82 71.5 74.5 71.5 Z" class="i-line" />
+    <!-- The vertical I, extended down to Y=78.5 to match the baseline of the A's pointed tail -->
+    <path d="M 74.5 -5 L 89.5 -5 L 89.5 78.5 Q 82 76 74.5 76.5 Z" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
