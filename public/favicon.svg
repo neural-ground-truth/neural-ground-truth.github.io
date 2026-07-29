@@ -11,8 +11,8 @@
     <!-- The masked A shape with rounded corners via CSS stroke -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, perfectly square, height adjusted to 91.6 to maintain perfect horizontal baseline alignment with the newly-thickened rounded A tip (Y=86.6) -->
-    <rect x="74.5" y="-5" width="22.2" height="91.6" class="i-line" />
+    <!-- The vertical I, perfectly square bounds, with rx="1.2" to give it perfectly rounded corners that match the A's softening exactly -->
+    <rect x="74.5" y="-5" width="22.2" height="91.6" rx="1.2" class="i-line" />
     
     <style>
         .a-shape { 
