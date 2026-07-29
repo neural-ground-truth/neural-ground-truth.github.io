@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, with perfect weight, reduced precisely to 90 -->
-    <rect x="74.5" y="-5" width="24.2" height="90" class="i-line" />
+    <!-- The vertical I, with perfectly vertical sides and a mathematically exact 75.1 radius arc cutting across the bottom. Sweep-flag corrected to perfectly mirror the left leg's concavity. -->
+    <path d="M 74.5 -5 L 98.7 -5 L 98.7 78.5 a 75.1 75.1 0 0 0 -24.2 -7.0 Z" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
