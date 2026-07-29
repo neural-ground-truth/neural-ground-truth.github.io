@@ -11,8 +11,8 @@
     <!-- The masked A shape with a gap cut out -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, with perfectly vertical sides and a mathematically exact 75.1 radius arc cutting across the bottom. Sweep-flag corrected to perfectly mirror the left leg's concavity. -->
-    <path d="M 74.5 -5 L 98.7 -5 L 98.7 78.5 a 75.1 75.1 0 0 0 -24.2 -7.0 Z" class="i-line" />
+    <!-- The vertical I, extended down so its total height is 92, preserving the exact same 75.1 concave arc at its new baseline -->
+    <path d="M 74.5 -5 L 98.7 -5 L 98.7 87 a 75.1 75.1 0 0 0 -24.2 -7 Z" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
