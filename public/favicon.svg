@@ -1,24 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="aiGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4338ca" />
-      <stop offset="100%" stop-color="#38bdf8" />
+    <linearGradient id="grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4338ca;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
     </linearGradient>
   </defs>
-  
   <style>
-    .mark {
-      fill: none;
-      stroke: url(#aiGrad);
-      stroke-width: 10;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .i-pillar { fill: #1f2937; }
+    @media (prefers-color-scheme: dark) {
+      .i-pillar { fill: #f8fafc; }
     }
   </style>
-
-  <!-- The Diagonal I cutting across -->
-  <path class="mark" d="M 42.5 20 L 72.5 80" />
-
-  <!-- The A (Left leg, half right leg, returning crossbar) -->
-  <path class="mark" d="M 27.5 80 L 57.5 20 L 72.5 50 L 42.5 50" />
+  
+  <!-- The 'A' (Left slanted leg + horizontal crossbar) -->
+  <path d="M 15 85 L 35 85 L 45.7 60 L 65 60 L 65 45 L 52.1 45 L 65 15 L 45 15 Z" fill="url(#grad)" />
+  
+  <!-- The 'I' (Vertical pillar) -->
+  <rect class="i-pillar" x="65" y="15" width="20" height="70" />
 </svg>
