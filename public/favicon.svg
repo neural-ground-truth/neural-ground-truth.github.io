@@ -6,18 +6,13 @@
             <rect x="0" y="0" width="128" height="128" fill="white" />
             <rect x="74" y="-10" width="25.2" height="150" fill="black" />
         </mask>
-        
-        <clipPath id="i-clip">
-            <rect x="0" y="-10" width="128" height="80" />
-            <use href="#a-path" />
-        </clipPath>
     </defs>
 
     <!-- The masked A shape -->
     <use href="#a-path" class="a-shape" mask="url(#gap-mask)" />
     
-    <!-- The vertical I, matching the left leg's exact width (24.2) and aligning perfectly with the A's bottom arc -->
-    <rect x="74.5" y="-5" width="24.2" height="100" class="i-line" clip-path="url(#i-clip)" />
+    <!-- The vertical I, explicitly drawn as a path to guarantee no diagonal clipping cuts from the browser -->
+    <path d="M 74.5 -5 L 98.7 -5 L 98.7 78.5 Q 85 71.5 74.5 71.5 Z" class="i-line" />
     
     <style>
         .a-shape { fill: #000; }
