@@ -1,0 +1,38 @@
+---
+const today = new Date();
+---
+<footer>
+	<div class="wrap">
+		&copy; {today.getFullYear()} Elvis Tata Tanghang. All rights reserved.
+		<div class="social-links">
+			<a href="https://github.com/tanettech" target="_blank" rel="noopener">GitHub</a>
+			<a href="https://huggingface.co/ElvisTata2024" target="_blank" rel="noopener">Hugging Face</a>
+			<a href="https://www.linkedin.com/in/elvis-tata" target="_blank" rel="noopener">LinkedIn</a>
+		</div>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 0;
+		border-top: 1px solid var(--line);
+		text-align: center;
+		color: var(--ink-dim);
+		font-size: 0.9em;
+		margin-top: 4em;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: var(--ink-dim);
+		border-bottom: 1px solid transparent;
+		transition: color 0.2s;
+	}
+	.social-links a:hover {
+		color: var(--accent);
+	}
+</style>

@@ -1,0 +1,44 @@
+---
+title: "Visualizing Attention Mechanisms"
+description: "A Jalammar-style breakdown of how attention works in modern Transformers, from dot products to multi-head."
+pubDate: "2026-07-29"
+heroImage: "../../assets/blog-placeholder-about.jpg"
+---
+
+<div class="tldr-box">
+  <h4>TL;DR</h4>
+  <ul>
+    <li>Attention is just a weighted average of values, where weights are determined by the similarity between queries and keys.</li>
+    <li>Self-attention allows a model to weigh the importance of different words in a sentence when encoding a specific word.</li>
+    <li>Multi-head attention runs this process in parallel to capture different types of relationships.</li>
+  </ul>
+</div>
+
+Attention is the core mechanism that makes Transformers so powerful. By allowing the model to focus on different parts of the input sequence, it effectively solves the long-term dependency problem that plagued RNNs.
+
+### The Math behind it
+
+The scaled dot-product attention computes the outputs as:
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+Where:
+- $Q$ is the Query matrix
+- $K$ is the Key matrix
+- $V$ is the Value matrix
+- $d_k$ is the dimension of the keys
+
+```python
+import torch
+import torch.nn.functional as F
+
+def scaled_dot_product_attention(query, key, value):
+    d_k = query.size(-1)
+    scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
+    p_attn = F.softmax(scores, dim=-1)
+    return torch.matmul(p_attn, value), p_attn
+```
+
+As you can see, the implementation in PyTorch is surprisingly straightforward. In upcoming posts, we will dive deeper into how this scales to billions of parameters!

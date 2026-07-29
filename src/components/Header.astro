@@ -1,0 +1,47 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+<header>
+	<div class="wrap">
+		<h2 class="brand"><a href="/">Neural Ground Truth</a></h2>
+		<nav class="links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/posts">Posts</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</nav>
+	</div>
+</header>
+<style>
+	h2.brand {
+		margin: 0;
+		font-size: 1.25em;
+		letter-spacing: -0.02em;
+		font-weight: 700;
+		border: none;
+	}
+	h2.brand a {
+		color: var(--ink);
+		border: none;
+	}
+	h2.brand a:hover {
+		color: var(--accent);
+	}
+	nav.links {
+		display: flex;
+		gap: 1.5em;
+		align-items: center;
+	}
+	nav.links a {
+		font-size: 0.95em;
+		font-weight: 500;
+		color: var(--ink-dim);
+		border-bottom: 2px solid transparent;
+		padding-bottom: 0.2em;
+		transition: color 0.2s, border-color 0.2s;
+	}
+	nav.links a:hover,
+	nav.links a.active {
+		color: var(--ink);
+		border-bottom-color: var(--accent);
+	}
+</style>

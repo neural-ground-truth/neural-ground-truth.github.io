@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Glossary"
+	description="A living dictionary of terms in AI, NLP, and Speech."
+	pubDate={new Date()}
+>
+	<p>
+		The field of artificial intelligence is full of jargon. This is a living document defining key terms used across Neural Ground Truth posts.
+	</p>
+
+	<dl>
+		<dt id="attention"><strong>Attention Mechanism</strong></dt>
+		<dd>A technique that allows models to dynamically focus on different parts of an input sequence when processing data, solving the bottleneck problem in traditional sequence-to-sequence models.</dd>
+
+		<dt id="kv-cache"><strong>KV-Cache</strong></dt>
+		<dd>An optimization technique used during transformer inference to store previously computed Key and Value tensors, avoiding redundant calculations for past tokens.</dd>
+
+		<dt id="low-resource"><strong>Low-Resource Language</strong></dt>
+		<dd>A language that lacks large, high-quality digital datasets (text or audio) necessary for training modern machine learning models (e.g., Kinyarwanda, Fon, Ewe).</dd>
+	</dl>
+
+	<style>
+		dt {
+			font-size: 1.2em;
+			margin-top: 1.5em;
+			color: var(--accent);
+		}
+		dd {
+			margin-left: 0;
+			margin-top: 0.5em;
+			padding-left: 1em;
+			border-left: 2px solid var(--line);
+			color: var(--ink-dim);
+		}
+	</style>
+</Layout>
