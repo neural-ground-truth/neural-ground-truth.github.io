@@ -36,7 +36,9 @@ Before analyzing massive language models, the baseline mathematics of neural opt
 ### Phase 4: Transformers & LLMs (The Frontier)
 *The architecture that scaled AI to superhuman levels.*
 
-- **The Transformer:** Recurrence was completely abandoned in favor of massive parallelization via Self-Attention in the seminal paper *Attention Is All You Need* ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)).
+- **The Transformer:** Recurrence was completely abandoned in favor of massive parallelization via Self-Attention in the seminal paper *Attention Is All You Need* ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)). For a definitive visual intuition of this architecture, see *The Illustrated Transformer* [^2].
+
+[^2]: Alammar, J. (2018). "The Illustrated Transformer." [jalammar.github.io](https://jalammar.github.io/illustrated-transformer/).
 - **LLM Pretraining & Scaling Laws:** The shift from encoder-decoder architectures to massive causal (decoder-only) models like the GPT series, trained on next-token prediction at Internet-scale.
 - **Efficiency & Deployment:** Optimizing massive parameters using Mixture of Experts (MoE), rotary positional embeddings (RoPE), and advanced quantization (AWQ/GPTQ).
 - **Alignment:** Moving beyond raw token prediction into agentic planning and human-aligned responses via Reinforcement Learning from Human Feedback (RLHF) and Direct Preference Optimization (DPO).
