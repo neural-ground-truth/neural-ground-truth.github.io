@@ -60,5 +60,3 @@ As outlined in recent literature (e.g., *Roadmap towards Superhuman Speech Under
 4. **Level 4 (Abstract Acoustic Knowledge):** Grasping complex environments (overlapping speakers, room reverberation).
 5. **Level 5 (Superhuman Understanding):** Seamless integration of all cues, evaluated by comprehensive benchmarks like **SAGI**.
 
-### Our Engineering Focus
-Our ongoing research builds directly upon **Phase 4**, focusing specifically on overcoming the "Data Wall" for low-resource and African languages through cross-lingual transfer, while targeting Level 3+ paralinguistic reasoning in resource-constrained environments.
