@@ -41,7 +41,3 @@ Before analyzing massive language models, the baseline mathematics of neural opt
 - **Efficiency & Deployment:** Optimizing massive parameters using Mixture of Experts (MoE), rotary positional embeddings (RoPE), and advanced quantization (AWQ/GPTQ).
 - **Alignment:** Moving beyond raw token prediction into agentic planning and human-aligned responses via Reinforcement Learning from Human Feedback (RLHF) and Direct Preference Optimization (DPO).
 
-### Our Engineering Focus
-Our ongoing research builds directly upon **Phase 4**. We focus specifically on:
-- Exploring emergent reasoning capabilities in highly-distilled, significantly smaller models.
-- Improving multilingual reasoning and zero-shot transfer capabilities for underrepresented African languages.

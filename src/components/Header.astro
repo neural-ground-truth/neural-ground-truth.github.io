@@ -139,6 +139,7 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
+		z-index: 1000;
 	}
 	.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
 		opacity: 1;
@@ -164,6 +165,9 @@ import { SITE_TITLE } from '../consts';
 		border-radius: 8px;
 		border-bottom: none;
 		transition: background 0.15s ease, color 0.15s ease;
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
 	}
 	.dropdown-content a:hover, .dropdown-content a:focus {
 		background: var(--bg-soft);
