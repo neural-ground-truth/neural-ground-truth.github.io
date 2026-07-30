@@ -8,8 +8,7 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://tanettech.github.io',
-	base: '/neural-ground-truth',
+	site: 'https://neural-ground-truth.github.io',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		remarkPlugins: [remarkMath],
