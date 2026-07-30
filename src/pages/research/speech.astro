@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Speech Architectures & Roadmaps"
+	description="Advancements and roadmaps in Automatic Speech Recognition (ASR) and Multilingual Speech Models."
+	pubDate={new Date()}
+>
+	<p>
+		The intersection of audio processing and large language models is rapidly evolving. On this page, we document the structural advancements, efficiency improvements, and long-term roadmap for speech-native architectures.
+	</p>
+
+	<h3>Current State of the Art</h3>
+	<p>
+		Historically, speech recognition relied on cascading systems (acoustic models feeding into language models). Modern paradigms are shifting towards end-to-end transformers that directly map continuous audio streams—or discrete audio tokens—to text, semantic spaces, or even direct audio output (Speech-to-Speech).
+	</p>
+
+	<ul>
+		<li><strong>Discretization:</strong> Techniques like EnCodec and HuBERT that quantize audio into discrete tokens, allowing standard LLM architectures to process audio like text.</li>
+		<li><strong>Continuous Modeling:</strong> Approaches that keep audio in continuous vector space, projecting them directly into the LLM context window using adapters (e.g., Whisper, Qwen-Audio).</li>
+	</ul>
+
+	<h3>The Roadmap</h3>
+	<p>
+		Our ongoing research focuses heavily on <strong>Low-Resource and African Languages</strong>. The immediate roadmap includes:
+	</p>
+	<ul>
+		<li>Addressing the "data wall" for underrepresented dialects through cross-lingual transfer learning.</li>
+		<li>Improving real-time inference latency for edge devices.</li>
+		<li>Integrating robust prosody and emotion understanding into discrete token spaces.</li>
+	</ul>
+
+	<p>
+		<em>Stay tuned as we update this page with links to deep-dive articles and code repositories.</em>
+	</p>
+</Layout>
