@@ -61,24 +61,26 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<h2 class="section-title">All Posts</h2>
-			<section>
-				<ul class="post-list">
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/posts/${post.id}/`}>
-									<div class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</div>
-									<h4 class="title">{post.data.title}</h4>
-									<p class="description">{post.data.description}</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			<div class="wrap" style="padding-top: 2em; padding-bottom: 2em;">
+				<h2 class="section-title">All Posts</h2>
+				<section>
+					<ul class="post-list">
+						{
+							posts.map((post) => (
+								<li>
+									<a href={`/posts/${post.id}/`}>
+										<div class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</div>
+										<h4 class="title">{post.data.title}</h4>
+										<p class="description">{post.data.description}</p>
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+			</div>
 		</main>
 		<Footer />
 	</body>
