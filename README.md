@@ -9,14 +9,3 @@ Welcome to the source code for **Neural Ground Truth**, a technical blog focused
 - **LLMs & Speech:** Architectural comparisons and efficiency improvements.
 - **Low-Resource NLP:** Challenges and solutions for languages with limited training data.
 
-## Local Development
-
-All commands are run from the root of the project:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-
-
