@@ -63,6 +63,35 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-family: var(--sans);
 				margin-top: 2em;
 			}
+			.citation-popover {
+				position: absolute;
+				background: var(--card-top);
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				border: 1px solid var(--line-soft);
+				box-shadow: var(--shadow-md);
+				padding: 16px;
+				border-radius: 12px;
+				max-width: 320px;
+				font-size: 15px;
+				color: var(--ink);
+				z-index: 1000;
+				opacity: 0;
+				pointer-events: none;
+				transform: translateY(10px);
+				transition: opacity 0.2s ease, transform 0.2s ease;
+				font-family: var(--sans);
+				line-height: 1.5;
+			}
+			.citation-popover.visible {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateY(0);
+			}
+			.citation-popover p {
+				margin: 0 !important;
+				font-size: 14.5px;
+			}
 		</style>
 	</head>
 
@@ -92,5 +121,66 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+
+		<!-- Citation Popover Logic -->
+		<div id="citation-popover" class="citation-popover"></div>
+		<script is:inline>
+			(function() {
+				const popover = document.getElementById('citation-popover');
+				let activeLink = null;
+
+				// Close popover when clicking outside
+				document.addEventListener('click', (e) => {
+					if (!popover.contains(e.target) && e.target !== activeLink) {
+						popover.classList.remove('visible');
+						activeLink = null;
+					}
+				});
+
+				// Find all footnote links
+				const refs = document.querySelectorAll('a[data-footnote-ref]');
+				refs.forEach(link => {
+					link.addEventListener('click', (e) => {
+						e.preventDefault();
+						e.stopPropagation();
+
+						// If clicking the same link, toggle off
+						if (activeLink === link) {
+							popover.classList.remove('visible');
+							activeLink = null;
+							return;
+						}
+
+						const targetId = link.getAttribute('href').substring(1);
+						const footnoteEl = document.getElementById(targetId);
+						
+						if (footnoteEl) {
+							// Clone it so we don't modify the DOM
+							const clone = footnoteEl.cloneNode(true);
+							
+							// Remove the backreference link (usually a ↩ symbol)
+							const backrefs = clone.querySelectorAll('.data-footnote-backref');
+							backrefs.forEach(br => br.remove());
+							
+							popover.innerHTML = clone.innerHTML;
+							
+							// Position the popover near the click
+							const rect = link.getBoundingClientRect();
+							popover.style.top = (window.scrollY + rect.bottom + 10) + 'px';
+							
+							// Keep it on screen
+							let leftPos = rect.left;
+							if (leftPos + 320 > window.innerWidth) {
+								leftPos = window.innerWidth - 340;
+							}
+							popover.style.left = Math.max(10, leftPos) + 'px';
+							
+							popover.classList.add('visible');
+							activeLink = link;
+						}
+					});
+				});
+			})();
+		</script>
 	</body>
 </html>

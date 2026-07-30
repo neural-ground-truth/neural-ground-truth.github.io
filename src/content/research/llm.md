@@ -45,7 +45,9 @@ Before analyzing massive language models, the baseline mathematics of neural opt
 *The engineering reality of deploying massive models.*
 
 Theory alone cannot train a trillion-parameter model. As outlined in the **CMU 11-868 (Large Language Model Systems)** curriculum, deploying state-of-the-art AI requires overcoming severe memory and bandwidth bottlenecks across massive GPU clusters.
-- **Parallelism:** The sheer size of modern LLMs requires splitting them across hundreds of GPUs. The definitive framework for 3D Parallelism (Data, Tensor, and Pipeline parallelism) was established in *Megatron-LM* ([Shoeybi et al., 2019](https://arxiv.org/abs/1909.08053)).
+- **Parallelism:** The sheer size of modern LLMs requires splitting them across hundreds of GPUs. The definitive framework for 3D Parallelism (Data, Tensor, and Pipeline parallelism) was established in *Megatron-LM* [^1].
+
+[^1]: Shoeybi, M., et al. (2019). "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism." arXiv preprint arXiv:1909.08053.
 - **Memory Optimization:** To prevent Out-Of-Memory (OOM) errors during distributed training, gradients and optimizer states must be sharded across GPUs, famously solved by the Zero Redundancy Optimizer in *ZeRO* ([Rajbhandari et al., 2020](https://arxiv.org/abs/1910.02054)).
 - **Compute Efficiency:** Standard attention is bottlenecked by GPU memory reads/writes. Fusing operations to keep data on the SRAM was revolutionized by *FlashAttention* ([Dao et al., 2022](https://arxiv.org/abs/2205.14135)).
 - **Serving & Inference:** Production serving requires extreme throughput. Solving memory fragmentation in the KV cache was achieved via *PagedAttention*, the engine behind the open-source *vLLM* engine ([Kwon et al., SOSP 2023](https://arxiv.org/abs/2309.06180)).
