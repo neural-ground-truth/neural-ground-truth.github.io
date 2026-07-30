@@ -4,7 +4,7 @@ description: "A comprehensive roadmap for Multilingual Natural Language Processi
 pubDate: "2026-07-30"
 ---
 
-The barrier to entry for AI is fundamentally linguistic. While massive models excel in high-resource languages like English, the vast majority of human languages—particularly African languages—hit the "Data Wall."
+The barrier to entry for AI is fundamentally linguistic. While massive models excel in high-resource languages like English, the vast majority of human languages hit the "Data Wall."
 
 This roadmap, inspired by the rigorous curriculum of Sapienza NLP, outlines the structural progression required to build, evaluate, and scale **Multilingual Natural Language Processing** systems.
 
@@ -40,4 +40,4 @@ Before training massive networks, we must mathematically represent language.
 - **Advanced Architectures:** Exploring Mixture of Experts (MoE) for routing language-specific tasks to dedicated subnetworks, and State Space Models (MAMBA) for efficient infinite-context processing.
 
 ### Our Engineering Focus
-Our ongoing research builds upon this curriculum to tackle the **Data Wall** for African languages. We are specifically focused on leveraging cross-lingual transfer, zero-shot capabilities, and highly-distilled models to democratize NLP access in resource-constrained environments.
+Our ongoing research builds upon this curriculum to tackle the **Data Wall** for low-resource languages. We are specifically focused on leveraging cross-lingual transfer, zero-shot capabilities, and highly-distilled models to democratize NLP access in resource-constrained environments.

@@ -1,6 +1,6 @@
 ---
 title: "The Reality of Low-Resource NLP"
-description: "Why standard evaluation metrics fail for underrepresented African languages."
+description: "Why standard evaluation metrics fail for underrepresented languages."
 pubDate: "2026-07-27"
 heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
@@ -9,7 +9,7 @@ heroImage: "../../assets/blog-placeholder-3.jpg"
   <h4>TL;DR</h4>
   <ul>
     <li>Most LLMs suffer severe performance degradation on languages not well-represented in Common Crawl.</li>
-    <li>Translation metrics like BLEU correlate poorly with human judgment on morphologically rich African languages.</li>
+    <li>Translation metrics like BLEU correlate poorly with human judgment on morphologically rich low-resource languages.</li>
   </ul>
 </div>
 

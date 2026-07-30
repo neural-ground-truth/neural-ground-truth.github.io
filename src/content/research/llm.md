@@ -53,4 +53,4 @@ Theory alone cannot train a trillion-parameter model. As outlined in the **CMU 1
 ### Our Engineering Focus
 Our ongoing research builds directly upon **Phase 4 and Phase 5**. We focus specifically on:
 - Exploring emergent reasoning capabilities in highly-distilled, significantly smaller models to bypass heavy infrastructure bottlenecks.
-- Improving multilingual reasoning and zero-shot transfer capabilities for underrepresented African languages, optimizing for edge deployment.
+- Improving multilingual reasoning and zero-shot transfer capabilities for low-resource languages, optimizing for edge deployment.
